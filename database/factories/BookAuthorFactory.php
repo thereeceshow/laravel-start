@@ -22,7 +22,9 @@ class BookAuthorFactory extends Factory
     public function definition()
     {
         return [
-            //
+          'book_id' => Book::all()->random()->id,
+          'author_id' => Author::all()->random()->id,
+            
         ];
     }
 }

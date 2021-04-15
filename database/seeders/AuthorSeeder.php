@@ -13,6 +13,7 @@ class AuthorSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Au::factory(7000)->create();
+    }
     }
 }

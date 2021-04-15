@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/users/new',[App\Http\Controllers\UserController::class, 'create']);
+Route::get('/users/all',[App\Http\Controllers\UserController::class, 'index']);

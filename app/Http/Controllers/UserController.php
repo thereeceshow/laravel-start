@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return User::All();
     }
 
     /**
@@ -22,9 +22,18 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $user = new User();
+          $user->first_name = $request->first_name;
+          $user->last_name = $request->last_name;
+          $user->email = $request->email;
+          $user->password = $request->password;
+          $user->suspended = false;
+      
+          $user->save();
+          return $user;
+   
     }
 
     /**
