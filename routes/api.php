@@ -20,6 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/users/new',[App\Http\Controllers\UserController::class, 'create']);
 Route::get('/users/all',[App\Http\Controllers\UserController::class, 'index']);
-Route::post('/users/{id}',[App\Http\Controllers\UserController::class, 'update']);
+Route::post('/users/update/{id}',[App\Http\Controllers\UserController::class, 'update']);
 Route::get('/books/all',[App\Http\Controllers\BookController::class, 'index']);
 Route::get('/authors/all',[App\Http\Controllers\AuthorController::class, 'index']);
+Route::get('/users/delete/{id}',[App\Http\Controllers\UserController::class, 'destroy']);
