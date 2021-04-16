@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\book;
+use App\Models\Book;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -14,7 +14,17 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+        //return Book::all();
+//       $books = Book::with('book_authors')->get();
+      $books = Book::all();
+      
+//       foreach ($books as $book) {
+//         $author = $book->book_authors->author;
+//         useset($book['book_authors']);
+        
+      //} 
+      return $books;
+      
     }
 
     /**

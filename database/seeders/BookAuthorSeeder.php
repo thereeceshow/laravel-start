@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\BookAuthor;
+use App\Models\Book;
+use App\Models\Author;
 
 class BookAuthorSeeder extends Seeder
 {
@@ -13,7 +16,16 @@ class BookAuthorSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\BookAuthor::factory(12000)->create();
-    }
+        for ($i = 0; $i < 180; $i++) {
+          
+        $author = Author::factory()->create();
+        $book = Book::factory()->create();
+        
+        BookAuthor::factory()
+          ->count(1)
+          ->for($author)
+          ->for($book)          
+          ->create();
+        }
     }
 }

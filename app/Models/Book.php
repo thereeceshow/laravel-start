@@ -10,6 +10,7 @@ class Book extends Model
     use HasFactory;
     protected $table = 'books';
     protected $primaryKey = 'id';
+    protected $with =['book_authors'];
     public $incrementing = true;
     public $timestamps = true;
   

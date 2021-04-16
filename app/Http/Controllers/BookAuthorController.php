@@ -14,7 +14,7 @@ class BookAuthorController extends Controller
      */
     public function index()
     {
-        //
+        return BookAuthor::All();
     }
 
     /**
@@ -46,7 +46,7 @@ class BookAuthorController extends Controller
      */
     public function show(Book_author $book_author)
     {
-        //
+        return User::All();
     }
 
     /**

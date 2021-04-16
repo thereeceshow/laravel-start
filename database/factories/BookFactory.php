@@ -24,8 +24,8 @@ class BookFactory extends Factory
         return [
           'title' => $this->faker->realText,
           'excerpt' => $this->faker->paragraph,
-          'ISBN' =>  $this->faker->isbn,
-          'pages' => $this->faker->randomBetween($min = 8, $max = 1200),
+          'ISBN' =>  $this->faker->isbn13,
+          'pages' => $this->faker->numberBetween($min = 8, $max = 1200),
           
             //
         ];

@@ -13,6 +13,11 @@ class Author extends Model
     public $incrementing = true;
     public $timestamps = true;
   
+    protected $fillable = [
+        'first_name',
+        'last_name',
+    ];
+  
     public function book_authors()
     {
       return $this->hasMany(BookAuthor::class);

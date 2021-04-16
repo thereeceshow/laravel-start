@@ -77,8 +77,8 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, User $user)
-    {
-        //
+    {  
+        $user->password = $request->password;
     }
 
     /**
@@ -89,6 +89,6 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        
     }
 }

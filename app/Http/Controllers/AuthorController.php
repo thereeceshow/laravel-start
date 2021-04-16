@@ -14,7 +14,8 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        //
+        $authors = Author::with('book_authors','book_authors.book')->get();
+        return $authors->toArray();
     }
 
     /**

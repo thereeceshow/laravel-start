@@ -10,6 +10,7 @@ class BookAuthor extends Model
     use HasFactory;
     protected $table = 'book_authors';
     protected $primaryKey = 'id';
+    protected $with =['author'];
     public $incrementing = true;
     public $timestamps = true;
   
@@ -19,7 +20,6 @@ class BookAuthor extends Model
     }
     public function book()
     {
-        return $this->belongsTo(boo::class);
+        return $this->belongsTo(Book::class);
     }
-}
 }

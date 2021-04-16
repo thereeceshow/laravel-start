@@ -19,9 +19,6 @@ class CreateBooksTable extends Migration
             $table->text('excerpt');
             $table->char('ISBN', 13);
             $table->integer('pages');
-            $table->float('cost', 2);
-            $table->float('value', 2);
-            $table->integer('current_condition');
             $table->timestamps();
         });
     }
